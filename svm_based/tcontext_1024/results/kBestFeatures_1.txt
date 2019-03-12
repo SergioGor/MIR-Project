@@ -2,3 +2,23 @@ K Best Features using f_classif: 1
 
 Confusion matrix: 
 
+[[    0  5204   211  1076]
+ [    0 11806   263  1672]
+ [    0  1708  7829   745]
+ [    0  6961   752  2524]]
+
+Classification report: 
+
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00      6491
+           1       0.46      0.86      0.60     13741
+           2       0.86      0.76      0.81     10282
+           3       0.42      0.25      0.31     10237
+
+   micro avg       0.54      0.54      0.54     40751
+   macro avg       0.44      0.47      0.43     40751
+weighted avg       0.48      0.54      0.48     40751
+
+
+Accuracy: 0.5437657971583519

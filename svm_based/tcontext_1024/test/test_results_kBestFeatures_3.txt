@@ -1,5 +1,7 @@
 K Best Features using f_classif: 3
 
+Best features: ['lowLevel.mfcc_2', 'lowLevel.spectral_flatness_db_0', 'lowLevel.spectral_skewness_0']
+
 Confusion matrix: 
 
 [[281  74   0 203]

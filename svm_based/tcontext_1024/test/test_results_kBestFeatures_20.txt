@@ -1,5 +1,7 @@
 K Best Features using f_classif: 20
 
+Best features: ['lowLevel.barkbands_1', 'lowLevel.barkbands_spread_0', 'lowLevel.mfcc_2', 'lowLevel.mfcc_3', 'lowLevel.mfcc_4', 'lowLevel.mfcc_5', 'lowLevel.mfcc_6', 'lowLevel.mfcc_7', 'lowLevel.mfcc_8', 'lowLevel.mfcc_10', 'lowLevel.pitch_instantaneous_confidence_0', 'lowLevel.pitch_salience_0', 'lowLevel.spectral_crest_0', 'lowLevel.spectral_energyband_low_0', 'lowLevel.spectral_flatness_db_0', 'lowLevel.spectral_kurtosis_0', 'lowLevel.spectral_skewness_0', 'lowLevel.spectral_spread_0', 'sfx.inharmonicity_0', 'sfx.tristimulus_1']
+
 Confusion matrix: 
 
 [[340 144   0  74]
