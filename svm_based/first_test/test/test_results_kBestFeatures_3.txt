@@ -1,0 +1,26 @@
+K Best Features using f_classif: 3
+
+Best features: ['lowLevel.mfcc_2', 'lowLevel.spectral_flatness_db_0', 'lowLevel.spectral_skewness_0']
+
+Confusion matrix: 
+
+[[281  74   0 203]
+ [ 49 483   0   0]
+ [ 35  76 357   0]
+ [ 86  70   7 279]]
+
+Classification report: 
+
+              precision    recall  f1-score   support
+
+           0       0.62      0.50      0.56       558
+           1       0.69      0.91      0.78       532
+           2       0.98      0.76      0.86       468
+           3       0.58      0.63      0.60       442
+
+   micro avg       0.70      0.70      0.70      2000
+   macro avg       0.72      0.70      0.70      2000
+weighted avg       0.71      0.70      0.70      2000
+
+
+Accuracy: 0.7

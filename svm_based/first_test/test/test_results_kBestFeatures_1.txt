@@ -1,0 +1,26 @@
+K Best Features using f_classif: 1
+
+Best features: ['lowLevel.spectral_flatness_db_0']
+
+Confusion matrix: 
+
+[[223 296  39   0]
+ [148 379   5   0]
+ [ 71  30 367   0]
+ [135 275  32   0]]
+
+Classification report: 
+
+              precision    recall  f1-score   support
+
+           0       0.39      0.40      0.39       558
+           1       0.39      0.71      0.50       532
+           2       0.83      0.78      0.81       468
+           3       0.00      0.00      0.00       442
+
+   micro avg       0.48      0.48      0.48      2000
+   macro avg       0.40      0.47      0.42      2000
+weighted avg       0.40      0.48      0.43      2000
+
+
+Accuracy: 0.4845
