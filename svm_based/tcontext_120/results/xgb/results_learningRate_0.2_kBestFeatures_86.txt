@@ -1,4 +1,4 @@
-Model trained in: 26 minutes and 10.3 seconds 
+Model trained in: 26 minutes and 46.58 seconds 
 
 K Best Features using f_classif: 86 and a learning rate of: 0.2
 
