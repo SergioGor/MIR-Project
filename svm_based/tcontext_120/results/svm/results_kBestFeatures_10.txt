@@ -1,4 +1,4 @@
-Model trained in: 11 minutes and 2.7 seconds 
+Model trained in: 10 minutes and 11.14 seconds 
 
 K Best Features using f_classif: 10
 
