@@ -1,0 +1,28 @@
+Model trained in: 41 minutes and 6.86 seconds 
+
+K Best Features using f_classif: 84 and a learning rate of: 1
+
+Best features: ['lowLevel.barkbands_0', 'lowLevel.barkbands_1', 'lowLevel.barkbands_2', 'lowLevel.barkbands_3', 'lowLevel.barkbands_4', 'lowLevel.barkbands_5', 'lowLevel.barkbands_6', 'lowLevel.barkbands_7', 'lowLevel.barkbands_8', 'lowLevel.barkbands_9', 'lowLevel.barkbands_10', 'lowLevel.barkbands_11', 'lowLevel.barkbands_12', 'lowLevel.barkbands_13', 'lowLevel.barkbands_14', 'lowLevel.barkbands_15', 'lowLevel.barkbands_16', 'lowLevel.barkbands_17', 'lowLevel.barkbands_18', 'lowLevel.barkbands_19', 'lowLevel.barkbands_20', 'lowLevel.barkbands_21', 'lowLevel.barkbands_22', 'lowLevel.barkbands_23', 'lowLevel.barkbands_24', 'lowLevel.barkbands_25', 'lowLevel.barkbands_26', 'lowLevel.barkbands_kurtosis_0', 'lowLevel.barkbands_skewness_0', 'lowLevel.barkbands_spread_0', 'lowLevel.dissonance_0', 'lowLevel.hfc_0', 'lowLevel.mfcc_0', 'lowLevel.mfcc_1', 'lowLevel.mfcc_2', 'lowLevel.mfcc_3', 'lowLevel.mfcc_4', 'lowLevel.mfcc_5', 'lowLevel.mfcc_6', 'lowLevel.mfcc_7', 'lowLevel.mfcc_8', 'lowLevel.mfcc_9', 'lowLevel.mfcc_10', 'lowLevel.mfcc_11', 'lowLevel.mfcc_12', 'lowLevel.pitch_0', 'lowLevel.pitch_instantaneous_confidence_0', 'lowLevel.pitch_salience_0', 'lowLevel.sccoeffs_0', 'lowLevel.sccoeffs_1', 'lowLevel.sccoeffs_2', 'lowLevel.sccoeffs_3', 'lowLevel.sccoeffs_4', 'lowLevel.sccoeffs_5', 'lowLevel.scvalleys_0', 'lowLevel.scvalleys_1', 'lowLevel.scvalleys_2', 'lowLevel.scvalleys_3', 'lowLevel.scvalleys_4', 'lowLevel.scvalleys_5', 'lowLevel.silence_rate_60dB_0', 'lowLevel.spectral_centroid_0', 'lowLevel.spectral_complexity_0', 'lowLevel.spectral_crest_0', 'lowLevel.spectral_decrease_0', 'lowLevel.spectral_energy_0', 'lowLevel.spectral_energyband_high_0', 'lowLevel.spectral_energyband_low_0', 'lowLevel.spectral_energyband_middle_high_0', 'lowLevel.spectral_energyband_middle_low_0', 'lowLevel.spectral_flatness_db_0', 'lowLevel.spectral_flux_0', 'lowLevel.spectral_kurtosis_0', 'lowLevel.spectral_rms_0', 'lowLevel.spectral_rolloff_0', 'lowLevel.spectral_skewness_0', 'lowLevel.spectral_spread_0', 'lowLevel.spectral_strongpeak_0', 'lowLevel.zerocrossingrate_0', 'sfx.inharmonicity_0', 'sfx.oddtoevenharmonicenergyratio_0', 'sfx.tristimulus_0', 'sfx.tristimulus_1', 'sfx.tristimulus_2']
+
+Confusion matrix: 
+
+[[ 5200   958   262    71]
+ [  984 12299   382    76]
+ [  364   549  9331    38]
+ [  150   242   108  9737]]
+
+Classification report: 
+
+              precision    recall  f1-score   support
+
+           0       0.78      0.80      0.79      6491
+           1       0.88      0.90      0.89     13741
+           2       0.93      0.91      0.92     10282
+           3       0.98      0.95      0.97     10237
+
+   micro avg       0.90      0.90      0.90     40751
+   macro avg       0.89      0.89      0.89     40751
+weighted avg       0.90      0.90      0.90     40751
+
+
+Accuracy: 0.8973276729405414
