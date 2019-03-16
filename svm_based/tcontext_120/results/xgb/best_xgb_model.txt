@@ -1,1 +1,1 @@
-learning rate = 0.5 and 86_best_features presented the best accuracy: 0.899339893499546
+learning rate = 0.5 and 84_best_features presented the best accuracy: 0.899339893499546
