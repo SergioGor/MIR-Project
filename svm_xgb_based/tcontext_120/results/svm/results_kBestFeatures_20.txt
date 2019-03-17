@@ -1,0 +1,28 @@
+Model trained in: 11 minutes and 55.51 seconds 
+
+K Best Features using f_classif: 20
+
+Best features: ['lowLevel.mfcc_0', 'lowLevel.mfcc_1', 'lowLevel.mfcc_2', 'lowLevel.mfcc_3', 'lowLevel.mfcc_4', 'lowLevel.mfcc_5', 'lowLevel.mfcc_6', 'lowLevel.mfcc_7', 'lowLevel.mfcc_8', 'lowLevel.mfcc_9', 'lowLevel.pitch_instantaneous_confidence_0', 'lowLevel.pitch_salience_0', 'lowLevel.sccoeffs_2', 'lowLevel.sccoeffs_3', 'lowLevel.sccoeffs_5', 'lowLevel.spectral_crest_0', 'lowLevel.spectral_flatness_db_0', 'lowLevel.spectral_spread_0', 'sfx.inharmonicity_0', 'sfx.tristimulus_1']
+
+Confusion matrix: 
+
+[[ 4556  1708    59   168]
+ [ 1710 11811    85   135]
+ [  252  1352  8641    37]
+ [  225   491   116  9405]]
+
+Classification report: 
+
+              precision    recall  f1-score   support
+
+           0       0.68      0.70      0.69      6491
+           1       0.77      0.86      0.81     13741
+           2       0.97      0.84      0.90     10282
+           3       0.97      0.92      0.94     10237
+
+   micro avg       0.84      0.84      0.84     40751
+   macro avg       0.85      0.83      0.84     40751
+weighted avg       0.85      0.84      0.85     40751
+
+
+Accuracy: 0.8444700743540036

@@ -1,0 +1,28 @@
+Model trained in: 21 minutes and 13.5 seconds 
+
+K Best Features using f_classif: 40 and a learning rate of: 0.01
+
+Best features: ['lowLevel.barkbands_1', 'lowLevel.barkbands_2', 'lowLevel.barkbands_16', 'lowLevel.barkbands_22', 'lowLevel.barkbands_23', 'lowLevel.barkbands_spread_0', 'lowLevel.hfc_0', 'lowLevel.mfcc_0', 'lowLevel.mfcc_1', 'lowLevel.mfcc_2', 'lowLevel.mfcc_3', 'lowLevel.mfcc_4', 'lowLevel.mfcc_5', 'lowLevel.mfcc_6', 'lowLevel.mfcc_7', 'lowLevel.mfcc_8', 'lowLevel.mfcc_9', 'lowLevel.mfcc_10', 'lowLevel.mfcc_11', 'lowLevel.pitch_instantaneous_confidence_0', 'lowLevel.pitch_salience_0', 'lowLevel.sccoeffs_1', 'lowLevel.sccoeffs_2', 'lowLevel.sccoeffs_3', 'lowLevel.sccoeffs_4', 'lowLevel.sccoeffs_5', 'lowLevel.scvalleys_3', 'lowLevel.scvalleys_4', 'lowLevel.scvalleys_5', 'lowLevel.spectral_crest_0', 'lowLevel.spectral_energyband_high_0', 'lowLevel.spectral_energyband_low_0', 'lowLevel.spectral_energyband_middle_high_0', 'lowLevel.spectral_energyband_middle_low_0', 'lowLevel.spectral_flatness_db_0', 'lowLevel.spectral_spread_0', 'lowLevel.spectral_strongpeak_0', 'lowLevel.zerocrossingrate_0', 'sfx.inharmonicity_0', 'sfx.tristimulus_1']
+
+Confusion matrix: 
+
+[[ 4235  1849    28   379]
+ [ 2115 11244    86   296]
+ [   41  1428  8724    89]
+ [  329   652   149  9107]]
+
+Classification report: 
+
+              precision    recall  f1-score   support
+
+           0       0.63      0.65      0.64      6491
+           1       0.74      0.82      0.78     13741
+           2       0.97      0.85      0.91     10282
+           3       0.92      0.89      0.91     10237
+
+   micro avg       0.82      0.82      0.82     40751
+   macro avg       0.82      0.80      0.81     40751
+weighted avg       0.83      0.82      0.82     40751
+
+
+Accuracy: 0.8174032539078796

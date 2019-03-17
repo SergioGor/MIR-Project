@@ -12,9 +12,7 @@ def prepareDataset(tcontext, fft_size, musdb18_path):
     test_tracks = mus.load_mus_tracks(subsets=['test'])
 
     # open file
-    with h5py.File(musdb18_path + 'musdb_classify.hdf5', 'w') as hdf:
-        # with h5py.File('/media/archive/' + 'musdb_classify_tcontext_' + str(tcontext) + '.hdf5', 'w') as hdf:
-        # store hyperparameters
+    with h5py.File(musdb18_path + 'musdb_classify_cqt.hdf5', 'w') as hdf:
         hdf.attrs.create('tcontext', tcontext)
         # initialize frequency index variable
         f_starts = np.array([], dtype='intp')
@@ -25,15 +23,19 @@ def prepareDataset(tcontext, fft_size, musdb18_path):
         # initialize variables for stats
         mean = np.zeros(int(fft_size / 2 + 1), dtype=np.float32)
         M2 = np.zeros(int(fft_size / 2 + 1), dtype=np.float32)
-
+        #mean = np.zeros(84, dtype=np.float32)
+        #M2 = np.zeros(84, dtype=np.float32)
         # initialize inputs and labels datasets. Uses chunking based on tcontext
         hdf.create_dataset('track_mag', (1, 1), maxshape=(None, int(fft_size / 2 + 1)),
                            chunks=(tcontext, int(fft_size / 2 + 1)), dtype='f')
+        #hdf.create_dataset('track_mag', (1, 1), maxshape=(None, 84),
+        #                                      chunks=(tcontext, 84), dtype='f')
         hdf.create_dataset('label', (1, 1), maxshape=(None, None), chunks=True, dtype=int)
         # Computed with the online welford algorithm
         hdf.create_dataset('mean', (1, int(fft_size / 2 + 1)), 'f')  # binwise statics
         hdf.create_dataset('std', (1, int(fft_size / 2 + 1)), 'f')
-
+        #hdf.create_dataset('mean', (1, 84), 'f')  # binwise statics
+        #hdf.create_dataset('std', (1, 84), 'f')
 
         # Define insert function for each track
         def insert_track(track, tcontext, n, mean, M2, f_starts, label, chunk_ind):
@@ -48,13 +50,17 @@ def prepareDataset(tcontext, fft_size, musdb18_path):
             # compute STFT using librosa
             track = np.abs(
                 lsa.core.stft(track, n_fft=fft_size, hop_length=int(fft_size / 4), win_length=None, window='hann',
-                              center=True, dtype='complex64', pad_mode='reflect'))
+                          center=True, dtype='complex64', pad_mode='reflect'))**2
+            #track = lsa.feature.melspectrogram(S=track)
+            #track = np.abs(lsa.cqt(track, sr=44100, hop_length=256))
             track = np.swapaxes(track, 0, 1)
             # Apply logarithmic compression
             track = np.log10(1+track)
             # Store input and label in HDF5
             f_starts = np.hstack((f_starts, (len(track) + f_starts[-1])))  # we store frequency index
-            hdf['track_mag'].resize((f_starts[-1], int(fft_size / 2 + 1)))
+
+            #hdf['track_mag'].resize((f_starts[-1], int(fft_size / 2 + 1)))
+            hdf['track_mag'].resize((f_starts[-1], 84))
             hdf['track_mag'][f_starts[-2]:f_starts[-1], :] = track
 
             chunk_ind += int(len(track) / tcontext)
@@ -113,7 +119,7 @@ def prepareDataset(tcontext, fft_size, musdb18_path):
         hdf['mean'][0, ...] = mean
         hdf['std'][0, ...] = np.sqrt(M2 / (n - 1))
 
-        # Also store indexes of frequency data streams: index corresponds to utterance starting point
+        # Also store indexes of frequency data streams: index corresponds to utterance (or song) starting point
         hdf.create_dataset('f_indexes', (len(f_starts),), dtype='intp')
         hdf['f_indexes'][...] = f_starts
         # Close the HDF5 file

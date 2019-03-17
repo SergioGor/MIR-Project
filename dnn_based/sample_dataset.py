@@ -23,9 +23,9 @@ class musDB_class_dataset(Dataset):
     def __len__(self):
         # Returns the length of the dataset
         if self.mode == 'train':
-            lens = int((self.train_end_f_ind / self.tcontext))
+            lens = int((self.train_end_f_ind / self.tcontext))-1
         else:
-            lens = int(self.val_stftbins / self.tcontext)
+            lens = int(self.val_stftbins / self.tcontext)-1
         return lens
 
     def __getitem__(self, idx):

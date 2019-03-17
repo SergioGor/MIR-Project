@@ -8,6 +8,7 @@ The scripts in SVM approach correspond to our two baselines: a Scikit-learn impl
 
 The scripts in DNN approach correspond to a Pytorch implementation of :
 * ResNet-18
+* ResNet-34
 * ResNet-152
 * Plain-CNN
 * The encoder part of a U-net

@@ -1,0 +1,28 @@
+Model trained in: 3 minutes and 26.98 seconds 
+
+K Best Features using f_classif: 5 and a learning rate of: 0.2
+
+Best features: ['lowLevel.mfcc_2', 'lowLevel.mfcc_3', 'lowLevel.mfcc_4', 'lowLevel.mfcc_5', 'lowLevel.spectral_flatness_db_0']
+
+Confusion matrix: 
+
+[[ 3565  1757   100  1069]
+ [ 1683 10951   245   862]
+ [  166  1390  8612   114]
+ [  710   737   198  8592]]
+
+Classification report: 
+
+              precision    recall  f1-score   support
+
+           0       0.58      0.55      0.57      6491
+           1       0.74      0.80      0.77     13741
+           2       0.94      0.84      0.89     10282
+           3       0.81      0.84      0.82     10237
+
+   micro avg       0.78      0.78      0.78     40751
+   macro avg       0.77      0.76      0.76     40751
+weighted avg       0.78      0.78      0.78     40751
+
+
+Accuracy: 0.7783858064832765
