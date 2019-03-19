@@ -104,8 +104,9 @@ if __name__ == "__main__":
         criterion = nn.CrossEntropyLoss().cuda()
     else:
         criterion = nn.CrossEntropyLoss()
-
-    #optimizer = torch.optim.Adam(net.parameters(), lr=lr, weight_decay=0.0001)
+    if model == 'resnet18' or model == 'resnet34' or model == 'resnet152':
+        optimizer = torch.optim.Adam(net.parameters(), lr=lr, weight_decay=0.0001)
+    else:
     optimizer = torch.optim.Adam(net.parameters(), lr=lr)
 
     train_loss = torch.zeros(num_epochs)
